@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-image: url("blue.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header
+        {
+            backdrop-filter: blur(5px);
+            box-shadow: 10px 10px 60px 10px white;
+            padding:20px;
+
+        }
+        .container
+        {
+            /* background-color: aqua; */
+            /* height: 100px; */
+            width: 100%;
+            /* height: 100vh; */
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+        }
+        header .image
+        {
+            margin-bottom: -90px;
+        }
+        header .image #mou
+        {
+            /* background-color: aliceblue; */
+            margin-bottom: 10px;
+        }
+        .navbar ul 
+        {
+            background-color: transparent;
+            backdrop-filter: blur(300px);
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            /* display: inline; */
+            /* justify-content: space-around;
+            align-items: center; */
+            /* margin-left: 40px; */
+            /* display: inline; */
+            /* border: 1px solid grey; */
+            width: 100%;
+        }
+       
+        .navbar ul li a
+        {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 16px;
+            text-decoration: none;
+        }
+        header ul li a:hover
+        {
+            background-color: blue;
+        }
+        .full
+        {
+            margin-left: 100px;
+        }
+        .contentbox .heading
+        {
+            color: aliceblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 50px;
+            backdrop-filter: blur(20px);
+            width: 400px;
+            padding: 20px 20px 20px 20px;
+            border-radius: 50px;
+            box-shadow: 2px 2px 20px 10px white;
+        }
+        .contentbox .heading span
+        {
+            font-size: 40px;
+            text-decoration: underline;
+        }
+        .contentbox .heading .button button
+        {
+            font-size: 18px;
+            border-radius: 10px;
+            background-color: rgb(21, 100, 247);
+            color: white;
+            border: none;
+            box-shadow: 3px 2px 2px 2px white;
+        }
+        .contentbox .heading .button button:hover
+        {
+            background-color: cornflowerblue;
+            color: black;
+        }
+        section .about .abouttitle 
+        {
+            color: white;
+            width: 400px;
+            font-size: 20px;
+            margin-top: 100px;
+             margin-left: 600px; 
+            padding: 2px 40px 6px 50px;
+            border-radius: 30px;
+            box-shadow: 2px 2px 50px 4px white;
+            backdrop-filter: blur(40px);
+        }
+        section .about .abouttitle h2
+        {
+            font-size: 50px;  
+        }
+        section .about .abouttitle p
+        {
+            text-align: justify;
+        }
+        section .aboutcontent
+        {
+            color: white;
+            font-size: 20px;
+            width: 1000px;
+            text-align: center;
+            backdrop-filter: blur(40px);
+            border-radius: 30px;
+            box-shadow: 2px 2px 50px 4px white;
+            margin-top: 150px;
+            padding: 2px 40px 6px 50px;
+        }
+        section .aboutcontent p
+        {
+            text-align: justify;
+        }
+        section .aboutcontent h1
+        {
+            font-size: 50px;
+        }
+        section .aboutcontent .eip
+        {
+            display: flex;
+            justify-content: space-around;
+            margin: 80px 20px 30px 10px;
+        }
+        section .aboutcontent .eip1
+        {
+            display: flex;
+            background-color: rgb(142, 250, 250);
+            /* margin: 20px 20px 20px 20px; */
+            padding: 25px 25px 25px 25px;
+            border-radius: 20px;
+            box-shadow: 40px 30px 70px 1px black;
+            opacity: 0.5;
+        }
+        section .aboutcontent .eip1:hover
+        {
+            background-color: rgb(76, 73, 252);
+            transition: 0.5s;
+            transition-duration: 0.5s; 
+            opacity: 1;
+        }
+        section .aboutcontent .eip1 .eipcontent
+        {
+            width: 280px;
+            margin-left: 20px;
+            margin-top: -20px;
+            color: black; 
+        }
+        section .aboutcontent .eip1 .eipimg
+        {
+            border: 0.2px solid black;
+            height:50px ;
+            box-shadow: 0.5px 0.2px 10px 1px black;
+        }
+        section .aboutcontent .eip2
+        {
+            display: flex;
+            background-color: rgb(104, 232, 236);
+            /* margin: 20px 20px 20px 20px; */
+            padding: 25px 25px 25px 25px;
+            border-radius: 20px;
+            box-shadow: 40px 30px 70px 1px black;
+            opacity: 0.5;
+        }
+        section .aboutcontent .eip2:hover
+        {
+            background-color: rgb(76,73,252);
+            transition: 0.5s;
+            transition-duration: 0.5s; 
+            opacity: 1;
+        }
+        section .aboutcontent .eip2 .eipcontent
+        {
+            width: 280px;
+            margin-left: 20px;
+            margin-top: -20px;
+            color: black; 
+        }
+        section .aboutcontent .eip2 .eipimg
+        {
+            border: 0.2px solid black;
+            height:50px ;
+            box-shadow: 0.5px 0.2px 10px 1px black;
+        }
+        /* section .aboutcontent .eip2
+        {
+            display: flex;
+        }
+        section .aboutcontent .eip2 .eipcontent
+        {
+            width: 350px;
+        } */
+        section .service 
+        {
+            backdrop-filter: blur(50px);
+            border-radius: 30px;
+            margin-top: 80px;
+            padding: 20px 20px 20px 50px;
+            width: 1030px;
+            box-shadow: 2px 2px 60px 10px white;
+        }
+        section .service .servicecont
+        {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        section .service .servicecont h1
+        {
+            font-size: 50px;
+        }
+        section .service .servicebox
+        {
+            background-color: rgb(94, 180, 255);
+            padding: 30px 30px 30px 30px;
+            border-radius: 70px;
+            width: 200px;
+        }
+        section .service .servicebox img
+        {
+            margin-left: 50px;
+        }
+        section .service .servicebox .servicepara
+        {
+            width: 200px;
+            text-align: center;
+            font-size: 18px;
+        }
+        section .service .servicebox:hover
+        {
+            background-color: rgb(232, 242, 252);
+            border-radius: 30px;
+            transition: 0.5s;
+            box-shadow: -3px -2px 20px 1px rgb(207, 207, 228);
+        } 
+        section .box
+        {
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-gap: 1px;
+            margin-left: 40px ;
+            margin-top: 50px;
+        }
+        section .info
+        {
+            font-size: 20px;
+            background-color:rgb(180, 252, 252) ;
+            width: 1000px;
+            margin: 150px 70px 30px 10px;
+            padding: 80px 30px 100px 30px;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 12px 12px 30px white;
+        }
+        section .info h1
+        {
+            font-size: 35px;
+        }
+        section .info input
+        {
+            font-size: 20px;
+            background: transparent;
+            outline: none;
+            border: 1px solid black;
+        }
+        section .info button
+        {
+            font-size: 20px;
+            background-color: aqua;
+            border: none;
+        }
+        section .info button:hover
+        {
+            background-color: blue;
+            color: aliceblue;
+            transition: 0.5s;
+        }
+        footer
+        {
+            background-color: rgb(184, 248, 248);
+            border-radius: 50px;
+            margin-top: 90px;
+            width: 1050px;
+            box-shadow: 2px 2px 30px 10px white;
+        }
+        footer img
+        {
+            margin-left: 300px;
+        }
+        footer h1
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="image">
+            <img id="mou" src="moumi_logo1.png" alt="" width="190px" height="130px">
+        </div>
+        <div class="container">
+            <div class="navbar">     
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Project</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="full">
+        <div class="contentbox">
+            <div class="heading">
+                <h3>Hey</h3>
+                <h1>I am <span> Moumi <br> Biswas</span></h1>
+                <h4>Web Developer</h4>
+                <div class="button">
+                    <a href="resume.png" download><button>Get Resume</button></a>
+                </div>
+            </div>
+        </div>
+
+
+        <section>
+            <div class="about">
+                <div class="abouttitle">
+                    <h2>
+                        Let me introduce myself
+                        <!-- <span>Let me</span>
+                        <span>Introduce</span>
+                        <span>myself</span> -->
+                    </h2>
+                    <div class="para">
+                        <p>My name is Moumi BIswas and I am from Bengal. Currently, I am pursuing Computer Science Engineering.
+                        I have skills in web development including HTML, CSS, JavaScript, PHP, jQuery, and other related
+                        technologies. My interests lie in coding and exercising."</p>
+                    </div>
+                </div>
+
+                <div class="aboutcontent">
+                    <h1>About Me</h1>
+                    <p>I'm Moumi Biswas, a B.Tech student with a knack for problem-solving. Fluent in PHP and Python, I navigate
+                    through coding challenges with ease and passion. Recently awarded the SSIP grant, I'm on a mission to innovate
+                    and create solutions that make a difference. Let's code our way to a better tomorrow! 🚀</p>
+                    
+                    <div class="eip">
+                        <div class="eip1">
+                            <div class="eipimg">
+                                <img src="calender.png" alt="" width="50px" height="50px">
+                            </div>
+                            <div class="eipcontent">
+                                <p>A food website is your culinary sidekick, brimming with tasty recipes, cooking tricks, and endless food inspiration.</p>
+                            </div>
+                        </div>
+
+                        <div class="eip2">
+                            <div class="eipimg">
+                                <img src="food.png" alt="" width="50px" height="50px">
+                            </div>
+                            <div class="eipcontent">
+                                <p>A food website is your culinary sidekick, brimming with tasty recipes, cooking tricks, and endless food inspiration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+
+        <section>
+            <div class="service">
+                <div class="servicecont">
+                    <h1>Service Offers</h1>
+                    <p>"I specialize in crafting websites and applications related to artificial intelligence."</p>
+                </div>
+
+                <div class="box">
+                    <div class="servicebox">
+                        <img src="https://s3-alpha.figma.com/hub/file/3651150044/e7f6f391-c940-479e-9755-f005fbffa890-cover.png" alt="" width="100px" height="100px">
+                        <div class="servicepara">
+                            <h3>UX/UI Design</h3>
+                            <p>"An approach to creating unique designs involves exploring unconventional combinations, embracing experimentation, and fostering creativity without constraints."</p>
+                        </div>
+                    </div>
+                    <div class="servicebox">
+                        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/front-end-developer-4830933-4041850.png" alt="" width="100px" height="100px">
+                        <div class="servicepara">
+                            <h3>FRONT-END DESIGN</h3>
+                            <p>"I specialize in crafting exceptionally stunning front-end designs, combining innovation with aesthetic appeal to deliver captivating user experiences."</p>
+                        </div>
+                    </div>
+                    <div class="servicebox">
+                        <img src="https://www.pngitem.com/pimgs/m/336-3365133_back-end-developer-icon-hd-png-download.png" alt="" width="100px" height="100px">
+                        <div class="servicepara">
+                            <h3>BACK-END DESIGNING</h3>
+                            <p>"My expertise lies in backend development, where I excel in architecting robust and efficient systems to power seamless functionality."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="info">
+                <h1>Get update from anywhere</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid aspernatur laudantium fugit.</p>
+                <input type="email" placeholder="Email">
+                <button>Subscribe</button>
+            </div>
+        </section>
+
+        <footer>
+            <img src="moumi_logo1.png" alt="">
+            <div class="icon">
+                <h1>Follow</h1>
+                <!-- <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i> -->
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
